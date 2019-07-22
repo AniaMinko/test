@@ -1,1 +1,0 @@
-Card{1100 cardNumber=111111111, pinCode=1111, balance=100.0}

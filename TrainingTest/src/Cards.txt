@@ -1,0 +1,2 @@
+Card{1100 cardNumber=111111111, pinCode=1111, balance=225.0}
+Card{123 cardNumber=252525, pinCode=1212, balance=600.0}

@@ -1,0 +1,2 @@
+Machine{1 card=Card{1100 cardNumber=111111111, pinCode=1111, balance=225.0}, client=1111 Anna}
+Machine{11 card=Card{1100 cardNumber=111111111, pinCode=1111, balance=225.0}, client=1122 Sasha}

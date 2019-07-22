@@ -8,20 +8,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CardRepository implements ICardRepository {
-
-
     private static CardRepository instance;
     private List<Card> cards;
     private FileWorker fileWorker;
 
-    public static CardRepository getInstance() {
-        return instance;
-    }
-
     public CardRepository() {
+
         cards= new ArrayList<>();
     }
-
+    public static CardRepository getInstance() {
+        if (instance == null) {
+            instance = new CardRepository();
+        }
+        return instance;
+    }
     public List<Card> getCards() {
         return cards;
 
@@ -35,7 +35,7 @@ public class CardRepository implements ICardRepository {
     @Override
     public Boolean addCard(Card card) throws Exception {
         try {
-            Boolean temp = cards.add((Card) card);
+            Boolean temp = cards.add(card);
             fileWorker.writeCards(cards);
             return temp;
         } catch (NullPointerException e) {
